@@ -1,0 +1,11 @@
+version: '2.0'
+services: 
+    web:
+        build: 
+            context: .
+            dockerfile: Dockerfile.dev
+        ports: 
+            - "3000:3000"
+        volumes: 
+            - /frontend1/node_modules
+            - .:/frontend1
